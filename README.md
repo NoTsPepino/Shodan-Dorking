@@ -190,19 +190,19 @@ os:"Windows 2012" – Windows Server 2012; support end 2018.
 ```
 
 
-### Ciudad:
+### Ciudad `city`:
 Encontrar Dispositivos En Una Ciudad Específica.<br/>
 `city:"Bangalore"`
 
-### País:
+### País `country`:
 Encontrar Dispositivos En Un País Específico.<br/>
 `country:"IN"`
 
-### Geográfico:
+### Geográfico `geo`:
 Encontrar Dispositivos En Coordenadas Geográficas Específicas.<br/>
 `geo:"56.913055,118.250862"`
 
-### Hostname:
+### Hostname `server`:
 Encontrar Dispositivos Con Un Hostname Específico.<br/>
 `server: "gws" hostname:"google"`
 
@@ -210,32 +210,32 @@ Encontrar Dispositivos Con Un Hostname Específico.<br/>
 Encontrar Dispositivos Por Su IP o /x CIDR.<br/>
 `net:210.214.0.0/16`
 
-### os:
-Find devices based on operating system.<br/>
+### Sistema Operativo `os`:
+Encontrar Dispositivos Por Su Sistema Operativo Específico.<br/>
 `os:"windows 7"`
 
-### port:
-Find devices based on open ports.<br/>
+### Puertos `port`:
+Encontrar Dispositivos Por Puertos Abiertos Específicos.<br/>
 `proftpd port:21`
 
-### before/after:
-Find devices before or after between a given time.<br/>
+### Antes y Después `before | after`:
+Encontrar Dispositivos Por Fecha.<br/>
 `apache after:22/02/2009 before:14/3/2010`
 
-### Citrix:
-Find Citrix Gateway.<br/>
+### Usando Citrix `citrix`:
+Encontrar Gateway De Citrix.<br/>
 `title:"citrix gateway"`
 
-### Wifi Passwords:
-Helps to find the cleartext wifi passwords in Shodan.</br>
+### Contraseñas Wifi:
+Encontrar Las Contraseñas Wifi En Texto Claro En Shodan.</br>
 `html:"def_wirelesspassword"`
 
-### Surveillance Cams:
-With username:admin and password: :P</br>
+### Cámaras De Vigilancia:
+Encontrar Camaras De Vigilancia Con Username:admin y Password:` `</br>
 `NETSurveillance uc-httpd`
 
-### Fuel Pumps connected to internet:
-No auth required to access CLI terminal.</br>
+### Bombas De Combustible Conectadas a Internet:
+Encontrar Dispositivos Que No Requieren Autenticación Para Acceder Al Terminal CLI.</br>
 `"privileged command" GET`
 
 ### Windows RDP Password:
