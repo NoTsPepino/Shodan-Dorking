@@ -1,6 +1,6 @@
 # Shodan Dorking
 
-Lista de Shodan Dorks + herramientas para estos
+Lista de Shodan Dorks y herramientas para su uso
 
 ### DICOM 
 El estándar DICOM (Digital Imaging and Communications in Medicine) es un estándar utilizado en la industria médica para la gestión, almacenamiento y transmisión de imágenes médicas, como radiografías, tomografías computarizadas (TC), imágenes de resonancia magnética (IRM), entre otras.
