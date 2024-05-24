@@ -9,7 +9,7 @@ El estándar DICOM (Digital Imaging and Communications in Medicine) es un están
 "DICOM Server Response" port:104
 ```
 ```sh
-python3 Dicom.py
+python3 auto-DICOM.py
 ```
 
 ### Elasticsearch
@@ -25,7 +25,7 @@ curl -X GET "http://192.x.x.153:9200/_search?pretty=true"
 ```
 
 ```sh
-python3 elastic.py -t 192.x.x.153
+python3 auto-ELASTIC.py -t 192.1.1.153
 ```
 
 ### Access FTP Anonymous
@@ -41,7 +41,7 @@ El acceso FTP anónimo es una forma de conectarse a un servidor FTP sin proporci
 shodan search :"220" "230 Login successful." port:21 --fields ip_str --separator " " | awk '{print $1}' | cat > ips.txt
 ```
 ```sh
-python3 ftp.py -l ips.txt
+python3 auto-FTP.py -l ips.txt
 ```
 
 ### Authentication Disabled SMB
@@ -96,7 +96,7 @@ Es una aplicación de terminal que le permite conectarse al servicio ADB shell d
 shodan search :Android Debug Bridge port:5555 "Name:" --fields ip_str --separator " " | awk '{print $1}' | cat > ips.txt 
  ```
 ```sh
-python3 adb.py   
+python3 auto-ADB.py   
 ```
 
 ```sh
