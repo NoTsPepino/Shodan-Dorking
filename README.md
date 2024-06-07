@@ -285,3 +285,7 @@ Shows the miners running ETH. </br>
 ### Tesla Powerpack charging Status:
 Helps to find the charging status of tesla powerpack. </br>
 `http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2`
+
+### Mobotix Webcam Live:
+Live camera using Mobotix engine. </br>
+`/cgi-bin/guestimage.html`
